@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Task</title>
+
+    <style>
+        body {
+            background: #00b09b;
+            background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
+            background: linear-gradient(to right, #00b09b, #96c93d);
+            min-height: 100vh;
+        }
+
+        .text-gray {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+
+        <!-- For demo purpose -->
+        <div class="row text-center text-white mb-5">
+          <div class="col-lg-7 mx-auto">
+            <h1 class="display-4">Task List</h1>
+            <p class="lead">Team Ranga <a href="https://www.google.com/search?sca_esv=dd6f30f1e54205e3&sca_upv=1&sxsrf=ADLYWIJ9rrqIQVZwco3OoqmlW1vC2BxjOw:1716958526832&q=ranga+image+ada+mone&uds=ADvngMh47VTgGFr4IfwgIBFrVbOA47k7UJbnw0EtEHZxs88TqvMEkUNA2UQ1K7p0WBLvulzlYrAJXuS7wyKsWMM4rbOGIrbu3cXAvt2_kI1SwLwyxbjwr94MTndgZrH3bHlwvm_4TCStijz7ZPNOIRu-t9lB4RikjSyxOVmINvzqlmXUlbpGw8yJKia88eybytbnpUzHmSE9xc4aiCUzfsgZ0AWmTbeeN6ZIjyLy-wkgIttGmNRecnwIvXcAxcrmiLLtiC0HPcykgstSedHBTIO8Csv_1kon1nmDQuQyXyEr1LHZx2g7DqL2C1ohXg47BGTEAWgcd30P94euyAQitc2H_LVHrD9ffQ&udm=2&prmd=ivnsmbtz&sa=X&ved=2ahUKEwjg0Nf4iLKGAxVmxjgGHaMND58QtKgLegQIDRAB&biw=1536&bih=730&dpr=1.25#vhid=zySyEA8UY0UQZM&vssid=mosaic" class="text-white"> 
+                      <u>Do or Die</u></a>
+            </p>
+          </div>
+        </div>
+        <!-- End -->
+      
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+
+            <form method="POST">
+                {%csrf_token%}
+                Do you want to delete?<br>
+                <button type="submit">Confirm?</button>
+                <a href="{%url 'tasklist' %}">Cancel</a>
+            </form>
+            
+            <!-- End -->
+          </div>
+        </div>
+      </div>
+</body>
+</html>
